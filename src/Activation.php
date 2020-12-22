@@ -26,11 +26,11 @@ class Activation {
     return $a < 0 ? 0 : 1;
   }
 
-  public function switch ($a) {
+  public function SiLU ($a) {
     return $a * $this->sigmoid($a);
   }
 
-  public function dswitch ($a) {
+  public function dSiLU ($a) {
     return $this->sigmoid($a) * (1 - $a) + $a;
   }
 }
