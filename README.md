@@ -86,11 +86,11 @@ $brain->set_activation("tanh");
 
 the unique parameter must be a sting, four values are recognized:
 
-```"tanh"```
+```"tanh"``` : hyperbolic tangent function
 
-```"sigmoid"```
+```"sigmoid"``` : Sigmoid function
 
-```"ReLU"```
+```"ReLU"``` : Rectified Linear Unit function
 
-```"switch"```
+```"SiLU"``` : Sigmoid Linear Unit function
 
