@@ -15,6 +15,7 @@ class FCNN {
     $this->nodes = $nodes;
     $this->count = count($nodes);
 
+    require_once("src/Activation.php");
     require_once("src/DenseLayer.php");
     require_once("src/DenseLayerInput.php");
     require_once("src/DenseLayerOutput.php");
@@ -98,6 +99,38 @@ class FCNN {
     foreach ($this->Layers as $layer) {
       $layer->set_activation_function($functionName);
     }
+  }
+
+  public function set_learning_rate ($value) {
+    for ($i=0; $i<$this->count; $i++) {
+      $this->layers[$i]->set_learning_rate($value);
+    }
+  }
+
+  public function save ($fileName) {
+    $data = array(
+      "nodes" => $this->nodes,
+      "weights" => array(),
+      "biases" => array()
+    );
+    for ($i=0; $i<$this->count; $i++) {
+      if (isset($this->layers[$i]->weights)) {
+        $data->weights[$i] = $this->layers[$i]->get_weights();
+      }
+      if (isset($this->layers[$i]->biases)) {
+        $data->biases[$i] = $this->layers[$i]->get_biases();
+      }
+    }
+    file_put_contents('memory/'.$fileName.'.json', json_encode($data));
+  }
+
+  static function load ($fileName) {
+    $data = json_decode(file_get_contents('memory/'.$fileName.'.json'));
+    $result = new FCNN ($data->nodes);
+    for ($i=1; $i<$result->count; $i++) {
+      $result->layers[$i]->set_weights_and_biases($data->weights[$i], $data->biases[$i]);
+    }
+    return $result;
   }
 
 }
