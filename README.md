@@ -6,6 +6,7 @@
     * [1.1. Set data](#block1.1)
 
 
+<a name="block1"></a>
 ## 1. Fully Connected Neural Network (FCNN) [↑](#index_block)
 
 ```php
@@ -29,6 +30,8 @@ echo $brain->caluculate([0.75, 0.25]);
 
 ?>
 ```
+
+<a name="block1.1"></a>
 ### 1.1. Set data [↑](#index_block)
 
 Two methods can be called to set known data, both require an indexed array containing a list of associatives arrays. Each associative array must contains two keys: "input" that contains an array of integer or floating values given as inputs, and "output" that contains the expected outcome (here again the value(s) must be wrap into an array).
