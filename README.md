@@ -95,6 +95,8 @@ the unique parameter must be a sting, four values are recognized:
 <a name="block1.4"></a>
 ### 1.3. Set learning rate [↑](#index_block)
 
+The learning rate is use to limit the modification brought to weights and biases when updated
+
 ```php
 <?php
 $brain->set_learning_rate(0.05);
@@ -142,10 +144,24 @@ echo $brain->calculate([0.75, 0.75]);
 <a name="block1.8"></a>
 ### 1.8. Save state [↑](#index_block)
 
+The save method will save the structure of the neural network as well as all the weights and biases values in json format. The parameter is the naame of the file.
+
+```php
+<?php
+$brain->save("XOR");
+?>
+```
 
 <a name="block1.9"></a>
 ### 1.9. Load state [↑](#index_block)
 
+The load static function aloud you to retrieve a saved neural network
+
+```php
+<?php
+$brain = FCNN::load("XOR");
+?>
+```
 
 
 
