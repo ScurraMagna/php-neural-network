@@ -6,6 +6,7 @@
     * [1.1. Set data](#block1.1)
         * [1.1.1. Training data](#block1.1.1)
         * [1.1.2. Controle data](#block1.1.1)
+    * [1.2. Set activation function](#block1.2)
 
 
 <a name="block1"></a>
@@ -71,4 +72,24 @@ To set the data that will later be use to controle the neural network, use the f
 $brain->set_data_controle($XOR);
 ?>
 ```
+
+<a name="block1.2"></a>
+### 1.2. Set activation function [↑](#index_block)
+
+In order to be able to resolve non linear problems, an activation function must be set:
+
+```php
+<?php
+$brain->set_activation("tanh");
+?>
+```
+
+the unique parameter must be a sting, four values are recognized:
+```"tanh"```
+
+```"sigmoid"```
+
+```"ReLU"```
+
+```"switch"```
 
