@@ -29,9 +29,9 @@ echo $brain->caluculate([0.75, 0.25]);
 
 ?>
 ```
-### 1.1 Set data [↑](#index_block)
+### 1.1. Set data [↑](#index_block)
 
-Two methods can be called to set known data, both require an indexed array containing a list of associatives arrays. Each associative array must contains two keys: "input" that contains an array of integer or floating values given as inputs, and "output" that contains the expected outcome (here again the value(s) must be wrap into an array) as follow:
+Two methods can be called to set known data, both require an indexed array containing a list of associatives arrays. Each associative array must contains two keys: "input" that contains an array of integer or floating values given as inputs, and "output" that contains the expected outcome (here again the value(s) must be wrap into an array).
 ```php
 <?php
 // Exemple of data for the "XOR" function
