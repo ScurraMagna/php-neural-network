@@ -50,7 +50,7 @@ $brain->set_data_training($XOR);
 <a name="block1.1.2"></a>
 #### 1.1.1. Controle data [↑](#index_block)
 
-To set the data that will later be use to controle the neural network, use the following method:
+To set the data that will later be use to controle if the training worked, use the following method:
 
 ```php
 <?php
