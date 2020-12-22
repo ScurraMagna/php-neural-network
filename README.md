@@ -4,6 +4,8 @@
 
 * [1. Fully Connected Neural Network (FCNN)](#block1)
     * [1.1. Set data](#block1.1)
+        * [1.1.1. Training data](#block1.1.1)
+        * [1.1.2. Controle data](#block1.1.1)
 
 
 <a name="block1"></a>
@@ -46,3 +48,8 @@ $XOR = array(
 );
 ?>
 ```
+The input layer contains a flattening algorithm, which mean that multi-dimentional arrays are accepted as input.
+
+<a name="block1.1.1"></a>
+#### 1.1.1. Training data [↑](#index_block)
+
