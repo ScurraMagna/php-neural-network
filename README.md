@@ -53,3 +53,22 @@ The input layer contains a flattening algorithm, which mean that multi-dimention
 <a name="block1.1.1"></a>
 #### 1.1.1. Training data [↑](#index_block)
 
+To set the data that will later be use to train the neural network, use the following method:
+
+```php
+<?php
+$brain->set_data_training($XOR);
+?>
+```
+
+<a name="block1.1.2"></a>
+#### 1.1.1. Controle data [↑](#index_block)
+
+To set the data that will later be use to controle the neural network, use the following method:
+
+```php
+<?php
+$brain->set_data_controle($XOR);
+?>
+```
+
