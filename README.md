@@ -85,6 +85,7 @@ $brain->set_activation("tanh");
 ```
 
 the unique parameter must be a sting, four values are recognized:
+
 ```"tanh"```
 
 ```"sigmoid"```
