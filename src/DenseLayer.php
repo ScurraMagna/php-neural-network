@@ -75,6 +75,19 @@ class DenseLayer {
     }
   }
 
+  public function get_weights () {
+    return $this->weights;
+  }
+
+  public function get_biases () {
+    return $this->biases;
+  }
+
+  public function set_weights_and_biases($weights, $biases) {
+    $this->weights = $weights;
+    $this->biases = $biases;
+  }
+
 }
 
 ?>
