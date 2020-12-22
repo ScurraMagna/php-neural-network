@@ -38,10 +38,10 @@ Two methods can be called to set known data, both require an indexed array conta
 <?php
 // Exemple of data for the "XOR" function
 $XOR = array(
-  [input => [0, 0], output => [0]],
-  [input => [0, 1], output => [1]],
-  [input => [1, 0], output => [1]],
-  [input => [1, 1], output => [0]]
+  ['input' => [0, 0], 'output' => [0]],
+  ['input' => [0, 1], 'output' => [1]],
+  ['input' => [1, 0], 'output' => [1]],
+  ['input' => [1, 1], 'output' => [0]]
 );
 ?>
 ```
