@@ -1,7 +1,4 @@
 <?php
-include("src/DenseLayer.php");
-include("src/DenseLayerInput.php");
-include("src/DenseLayerOutput.php");
 
 class FCNN {
 
@@ -18,6 +15,10 @@ class FCNN {
     $this->nodes = $nodes;
     $this->count = count($nodes);
 
+    require_once("src/DenseLayer.php");
+    require_once("src/DenseLayerInput.php");
+    require_once("src/DenseLayerOutput.php");
+    
     $this->layers[0] = new DenseLayerInput ();
     for ($i=1; $i<$this->count; $i++) {
       $this->layers[$i] = ($i == $this->count-1) ?
