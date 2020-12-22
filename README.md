@@ -20,7 +20,7 @@
 <a name="block1.1"></a>
 ### 1.1. Build the network [↑](#index_block)
 
-the FCNN class can be contruct by placing a single array of integers as parameter or multiple interger parameters, each integer represent the number of neurons (perceptrons) in each layer of the network, the first integer should always be equal to the number of inputs passed into calculation and the last integer should always be equal to the number of expected outputs.
+The FCNN class can be contruct by placing a single array of integers as parameter or multiple interger parameters, each integer represent the number of neurons (perceptrons) in each layer of the network, the first integer should always be equal to the number of inputs passed into calculation and the last integer should always be equal to the number of expected outputs.
 
 ```php
 <?php
