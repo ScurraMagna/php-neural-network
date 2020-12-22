@@ -12,6 +12,8 @@
     * [1.5. Train the network](#block1.5)
     * [1.6. Controle the effectiveness](#block1.6)
     * [1.7. Predict values from new inputs](#block1.7)
+    * [1.8. Save state](#block1.8)
+    * [1.9. Load state](#block1.9)
 
 
 <a name="block1"></a>
