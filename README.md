@@ -8,9 +8,10 @@
         * [1.2.1. Training data](#block1.2.1)
         * [1.2.2. Controle data](#block1.2.2)
     * [1.3. Set activation function](#block1.3)
-    * [1.4. Train the network](#block1.4)
-    * [1.4. Controle the effectiveness](#block1.5)
-    * [1.4. Predict values from new inputs](#block1.6)
+    * [1.4. Set learning rate](#block1.4)
+    * [1.5. Train the network](#block1.5)
+    * [1.6. Controle the effectiveness](#block1.6)
+    * [1.7. Predict values from new inputs](#block1.7)
 
 
 <a name="block1"></a>
@@ -92,7 +93,16 @@ the unique parameter must be a sting, four values are recognized:
 
 
 <a name="block1.4"></a>
-### 1.4. Train the network [↑](#index_block)
+### 1.3. Set learning rate [↑](#index_block)
+
+```php
+<?php
+$brain->set_learning_rate(0.05);
+?>
+```
+
+<a name="block1.5"></a>
+### 1.5. Train the network [↑](#index_block)
 
 Once the neural network is setup, the training method will ajust all internal weights and biases to find an approximation of desired function.
 
@@ -104,8 +114,8 @@ $brain->train(1000);
 
 The train function take a single integer parameter which represent the number of time the network will calculate a training input nd correct his weights and biases depending on the error between the result it obtain and the expected output. Each time, one of the rows from training data is randomly selected.
 
-<a name="block1.5"></a>
-### 1.5. Controle the effectiveness [↑](#index_block)
+<a name="block1.6"></a>
+### 1.6. Controle the effectiveness [↑](#index_block)
 
 The controle method verify if the training worked, all rows are calculated one by one and the network check if the error between its result is lower than the maximum error accepted (given as parameter). The method return a boolean value.
 
@@ -115,9 +125,8 @@ $brain->controle(0.001);
 ?>
 ```
 
-
-<a name="block1.6"></a>
-### 1.6. Predict values from new inputs [↑](#index_block)
+<a name="block1.7"></a>
+### 1.7. Predict values from new inputs [↑](#index_block)
 
 Once the training is succesful, you can simply use the neural network to predict an output for any given inputs.
 
@@ -130,6 +139,12 @@ echo $brain->calculate([0.75, 0.75]);
 ?>
 ```
 
+<a name="block1.8"></a>
+### 1.8. Save state [↑](#index_block)
+
+
+<a name="block1.9"></a>
+### 1.9. Load state [↑](#index_block)
 
 
 
