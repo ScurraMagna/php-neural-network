@@ -1,5 +1,4 @@
 <?php
-include('Activation.php')
 
 class DenseLayer {
 
