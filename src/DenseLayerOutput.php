@@ -1,5 +1,4 @@
 <?php
-require_once('Activation.php')
 
 class DenseLayerOutput {
 
